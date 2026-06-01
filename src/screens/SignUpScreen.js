@@ -12,7 +12,7 @@ const SignupScreen = ({ navigation }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
-    const [BorderColor, setBorderColor] = React.useState("green");
+    const [BorderColor, setBorderColor] = React.useState("#64748B");
 
     function Validate() {
         // alert(email, password, confirmPassword);
@@ -24,7 +24,7 @@ const SignupScreen = ({ navigation }) => {
             padding1 = 15;
         }
         else {
-            setBorderColor("green");
+            setBorderColor("#0F172A");
             mail = "";
             boolBusiness = true;
             padding1 = 0;
@@ -38,7 +38,7 @@ const SignupScreen = ({ navigation }) => {
             // alert(pass);
         }
         else {
-            setBorderColor("green");
+            setBorderColor("#0F172A");
             pass = "";
             boolRetId = true;
             padding3 = 0;
@@ -59,7 +59,7 @@ const SignupScreen = ({ navigation }) => {
             padding2 = 15;
         }
         else if (confirmPassword == password) {
-            setBorderColor("green");
+            setBorderColor("#0F172A");
             confirm = "";
             boolRegister = true;
             padding2 = 0;
@@ -74,27 +74,68 @@ const SignupScreen = ({ navigation }) => {
 
 
     return (
-        <ScrollView style={{ flex: 1 }} >
-            <View style={{}}>
-                <Image style={{ height: 150, width: 150, alignSelf: "center", marginTop: 40, borderRadius: 75, borderWidth: 2, borderColor: "green" }} resizeMode="contain" source={require('../assets/logo.png')} />
-            </View>
-            <View style={{ margin: "5%", marginTop: "10%", }}>
-                <Text style={{ textAlign: "center", fontSize: 40, color: 'black', marginBottom: "8%" }}>Create Account</Text>
+        <ScrollView style={{paddingHorizontal: 18,
+        paddingVertical: 15,
+        flex: 1,
+        backgroundColor: '#E2E8F0',}} >
+             <View
+        style={{
+          //   justifyContent: 'center',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          width: '100%',
+          //   backgroundColor: 'pink',
+        }}>
+            <TouchableOpacity onPress={() => navigation.pop()}>
+        <Image
+          source={require('../assets/back.png')}
+          style={{
+            width: 30,
+            height: 35,
+            tintColor: '#64748B',
+            // backgroundColor:"red",
+            resizeMode: 'contain',
+          }}
+        />
+</TouchableOpacity>
+        <Image
+          source={require('../assets/plannerLogoNew.png')}
+          style={{
+            width: 150,
+            height: 50,
+            // backgroundColor:"blue",
+            // resizeMode: 'contain',
+          }}
+        />
+      </View>
+                <Text style={{  
+                     marginBottom: "5%",
+
+                     fontSize: 40,
+            fontWeight: '700',
+            // marginHorizontal: '2%',
+            marginTop: '8%',
+            // alignSelf: 'center',
+            //  backgroundColor:"yellow",
+            
+            color: '#0F172A',
+                      }}>Create Account</Text>
 
                 <TextInput
                     label="Email"
                     theme={{
                         colors: {
-                            placeholder: "green"
+                            placeholder: "#64748B"
                         },
                         roundness: 10
                     }}
                     mode="outlined"
                     outlineColor={BorderColor}
-                    activeOutlineColor='green'
+                    activeOutlineColor='#0F172A'
                     onChangeText={(text) => setEmail(text)}
-                    style={{ marginBottom: "3%" }}
-                    left={<TextInput.Icon name={require('../assets/email.png')} />}
+                    style={{ marginBottom: "3%" ,backgroundColor:"#E2E8F0"}}
+                    left={<TextInput.Icon color={"#0F172A"} name={require('../assets/email.png')} />}
                     autoCapitalize='none'
                 />
                 <Text style={{ ...styles.error, fontSize: padding1 }} >{mail}</Text>
@@ -103,17 +144,17 @@ const SignupScreen = ({ navigation }) => {
                     label="Password"
                     theme={{
                         colors: {
-                            placeholder: "green"
+                            placeholder: "#64748B"
                         },
                         roundness: 10
                     }}
                     mode="outlined"
                     outlineColor={BorderColor}
-                    activeOutlineColor='green'
+                    activeOutlineColor='#0F172A'
                     onChangeText={(text) => setPassword(text)}
-                    style={{ marginBottom: "3%", }}
+                    style={{ marginBottom: "3%",backgroundColor:"#E2E8F0" }}
                     secureTextEntry
-                    left={<TextInput.Icon name={require('../assets/key.png')} />}
+                    left={<TextInput.Icon color={"#0F172A"} name={require('../assets/key.png')} />}
                 />
 
                 <Text style={{ ...styles.error, fontSize: padding2 }} >{pass}</Text>
@@ -123,31 +164,32 @@ const SignupScreen = ({ navigation }) => {
                     label="Confirm Password"
                     theme={{
                         colors: {
-                            placeholder: "green"
+                            placeholder: "#64748B"
                         },
                         roundness: 10
                     }}
                     mode="outlined"
                     outlineColor={BorderColor}
-                    activeOutlineColor='green'
+                    activeOutlineColor='#0F172A'
                     onChangeText={(text) => setConfirmPassword(text)}
-                    style={{ marginBottom: "3%", }}
+                    style={{ marginBottom: "3%",backgroundColor:"#E2E8F0" }}
                     secureTextEntry
-                    left={<TextInput.Icon name={require('../assets/key.png')} />}
+                    left={<TextInput.Icon color={"#0F172A"} name={require('../assets/key.png')} />}
                 />
                 <Text style={{ ...styles.error, fontSize: padding3 }}>{confirm}</Text>
 
-                <TouchableOpacity style={{ borderRadius: 10, backgroundColor: "green", marginTop: "5%" }} onPress={() => Validate()}>
-                    <Text style={{ textAlign: "center", color: "white", fontSize: 20, padding: 13 }}>Sign Up</Text>
+                <TouchableOpacity style={{ borderRadius: 23, backgroundColor: "#10B981", marginTop: "5%" }} onPress={() => Validate()}>
+                    <Text style={{ textAlign: 'center',
+              color: '#F8FAFC',
+              fontSize: 22,
+              padding: 20,
+              fontWeight: '600', }}>Sign Up</Text>
                 </TouchableOpacity>
 
 
                 <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
-                    <Text style={{ textAlign: "center", fontSize: 20, color: 'green', marginTop: 20 }}>Have an account? Login</Text>
+                    <Text style={{ textAlign: "center", fontSize: 17, color: '#64748B', marginTop: 20 }}>Have an account? Login</Text>
                 </TouchableOpacity>
-
-
-            </View>
 
         </ScrollView>
     );
@@ -159,11 +201,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "column",
     },
-    header: {
-        alignSelf: "flex-start",
-        margin: 40,
-        marginLeft: 20,
-    },
+    
     imgLogo: {
         alignSelf: "center",
     },
@@ -198,12 +236,7 @@ const styles = StyleSheet.create({
         marginTop: 8,
         flexDirection: "row",
     },
-    buttonText: {
-        color: "#1C843B",
-        textAlign: "center",
-        alignSelf: "center",
-        paddingLeft: 8,
-    },
+
     imgContinue: {
         alignSelf: "center",
         resizeMode: "contain",

@@ -4,12 +4,12 @@ apply from: "kotlin-ext.gradle"
 
 buildscript {
     ext {
-        buildToolsVersion = "31.0.0"
-        minSdkVersion = 21
-        compileSdkVersion = 31
-        targetSdkVersion = 31
+        buildToolsVersion = "33.0.0"
+        minSdkVersion = 23
+        compileSdkVersion = 33
+        targetSdkVersion = 33
         // kotlinVersion = "1.8.10"
-        kotlinVersion = '1.5.31'
+        kotlinVersion = '1.6.10'
        firebaseBomVersion = "32.1.1"
         if (System.properties['os.arch'] == "aarch64") {
             // For M1 Users we need to use the NDK 24 which added support for aarch64
@@ -25,9 +25,9 @@ buildscript {
     }
     dependencies {
         classpath 'com.google.gms:google-services:4.3.15'
-        classpath("com.android.tools.build:gradle:7.0.4")
+        classpath("com.android.tools.build:gradle:7.4.2")
         // classpath("com.android.tools.build:gradle:7.3.1")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
         // classpath("com.android.tools.build:gradle:7.0.4")
         // classpath("de.undercouch:gradle-download-task:4.1.2")
         // classpath 'com.google.gms:google-services:4.3.10'
