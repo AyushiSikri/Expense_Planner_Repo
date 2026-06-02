@@ -4,6 +4,23 @@ A modern and intuitive mobile application built with React Native that helps use
 
 ---
 
+## 📸 Screenshots
+
+<p text-align="center"> 
+  <img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/a63398df-54ee-49c6-a238-a43ddcb0f268" />
+  <img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/56e88fa0-bf0f-4196-9338-318e508b7b58" />
+  <img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/7f7bf899-9c5e-49e9-879c-1a6693213080" />
+  <img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/3eebbe0a-d7d9-4289-941d-77e3ce7bb66e" />
+</p>
+
+<p text-align="center">
+    <img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/776ae989-40a3-481b-8326-e038fd91c821" />
+  <img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/7f76a49f-a04c-451c-acbb-e7e92eb88116" />
+  <img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/b69c755a-2d9e-4c1c-badb-5e5759bc5111" />
+</p>
+
+---
+
 ## 📱 Features
 
 ### 🏠 Dashboard
@@ -98,39 +115,6 @@ Review all recorded expenses in one place.
 
 - Local Data Storage using AsyncStorage
 - No Internet Connection Required
-
----
-
-## 📸 Screenshots
-
-### Login Screen
-
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/a63398df-54ee-49c6-a238-a43ddcb0f268" />
-
-### Create Account Screen
-
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/56e88fa0-bf0f-4196-9338-318e508b7b58" />
-
-### Home Dashboard
-
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/7f7bf899-9c5e-49e9-879c-1a6693213080" />
-
-### Add Expense
-
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/776ae989-40a3-481b-8326-e038fd91c821" />
-
-### Category Screen
-
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/7f76a49f-a04c-451c-acbb-e7e92eb88116" />
-
-### Expense History
-
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/b69c755a-2d9e-4c1c-badb-5e5759bc5111" />
-
-### Add Budget
-
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/3eebbe0a-d7d9-4289-941d-77e3ce7bb66e" />
-
 
 ---
 
